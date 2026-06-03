@@ -1,9 +1,9 @@
-package com.example.it211_ss18_btth2.service;
+package com.example.it211_ss18_btth3.service;
 
-import com.example.it211_ss18_btth2.dto.*;
-import com.example.it211_ss18_btth2.entity.User;
-import com.example.it211_ss18_btth2.jwt.JwtTokenProvider;
-import com.example.it211_ss18_btth2.repository.UserRepository;
+import com.example.it211_ss18_btth3.dto.*;
+import com.example.it211_ss18_btth3.entity.User;
+import com.example.it211_ss18_btth3.jwt.JwtTokenProvider;
+import com.example.it211_ss18_btth3.repository.UserRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.*;
 import org.springframework.security.core.Authentication;

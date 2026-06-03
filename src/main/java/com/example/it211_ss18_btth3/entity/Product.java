@@ -1,4 +1,4 @@
-package com.example.it211_ss18_btth2.entity;
+package com.example.it211_ss18_btth3.entity;
 
 import jakarta.persistence.*;
 import lombok.*;

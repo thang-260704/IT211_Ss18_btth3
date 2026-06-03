@@ -1,7 +1,7 @@
-package com.example.it211_ss18_btth2.config;
+package com.example.it211_ss18_btth3.config;
 
-import com.example.it211_ss18_btth2.jwt.JwtAuthenticationFilter;
-import com.example.it211_ss18_btth2.service.CustomUserDetailsService;
+import com.example.it211_ss18_btth3.jwt.JwtAuthenticationFilter;
+import com.example.it211_ss18_btth3.service.CustomUserDetailsService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -39,6 +39,7 @@ public class SecurityConfig {
                 )
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(
+
                                 "/api/auth/register",
                                 "/api/auth/login"
                         ).permitAll()
@@ -54,6 +55,18 @@ public class SecurityConfig {
 
                         .requestMatchers(HttpMethod.DELETE, "/api/products/**")
                         .hasAnyRole("ADMIN", "STAFF")
+
+                        .requestMatchers(HttpMethod.POST, "/api/orders")
+                        .hasRole("CUSTOMER")
+
+                        .requestMatchers(HttpMethod.GET, "/api/orders/my")
+                        .hasRole("CUSTOMER")
+
+                        .requestMatchers(HttpMethod.GET, "/api/orders")
+                        .hasAnyRole("STAFF", "ADMIN")
+
+                        .requestMatchers(HttpMethod.PUT, "/api/orders/*/status")
+                        .hasRole("STAFF")
 
                         .anyRequest().authenticated()
                 )

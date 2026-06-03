@@ -1,6 +1,6 @@
-package com.example.it211_ss18_btth2.jwt;
+package com.example.it211_ss18_btth3.jwt;
 
-import com.example.it211_ss18_btth2.service.CustomUserDetailsService;
+import com.example.it211_ss18_btth3.service.CustomUserDetailsService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
@@ -29,6 +29,13 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     }
 
     @Override
+
+    protected boolean shouldNotFilter(HttpServletRequest request) {
+        String path = request.getServletPath();
+
+        return path.equals("/api/auth/register")
+                || path.equals("/api/auth/login");
+    }
     protected void doFilterInternal(
             HttpServletRequest request,
             HttpServletResponse response,

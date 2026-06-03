@@ -1,4 +1,4 @@
-package com.example.it211_ss18_btth2.jwt;
+package com.example.it211_ss18_btth3.jwt;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

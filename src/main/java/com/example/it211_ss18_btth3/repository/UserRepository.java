@@ -1,6 +1,6 @@
-package com.example.it211_ss18_btth2.repository;
+package com.example.it211_ss18_btth3.repository;
 
-import com.example.it211_ss18_btth2.entity.User;
+import com.example.it211_ss18_btth3.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

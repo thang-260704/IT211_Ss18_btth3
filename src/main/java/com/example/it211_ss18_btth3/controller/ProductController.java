@@ -1,8 +1,8 @@
-package com.example.it211_ss18_btth2.controller;
+package com.example.it211_ss18_btth3.controller;
 
-import com.example.it211_ss18_btth2.dto.ProductRequest;
-import com.example.it211_ss18_btth2.entity.Product;
-import com.example.it211_ss18_btth2.service.ProductService;
+import com.example.it211_ss18_btth3.dto.ProductRequest;
+import com.example.it211_ss18_btth3.entity.Product;
+import com.example.it211_ss18_btth3.service.ProductService;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,11 +1,14 @@
-package com.example.it211_ss18_btth2.dto;
+package com.example.it211_ss18_btth3.dto;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
 @Data
-public class LoginRequest {
+public class RegisterRequest {
+
+    @NotBlank
+    private String phone;
 
     @Email
     @NotBlank
@@ -13,4 +16,6 @@ public class LoginRequest {
 
     @NotBlank
     private String password;
+
+    private String role;
 }

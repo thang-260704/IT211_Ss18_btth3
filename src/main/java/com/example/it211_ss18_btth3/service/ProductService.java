@@ -1,8 +1,8 @@
-package com.example.it211_ss18_btth2.service;
+package com.example.it211_ss18_btth3.service;
 
-import com.example.it211_ss18_btth2.dto.ProductRequest;
-import com.example.it211_ss18_btth2.entity.Product;
-import com.example.it211_ss18_btth2.repository.ProductRepository;
+import com.example.it211_ss18_btth3.dto.ProductRequest;
+import com.example.it211_ss18_btth3.entity.Product;
+import com.example.it211_ss18_btth3.repository.ProductRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
